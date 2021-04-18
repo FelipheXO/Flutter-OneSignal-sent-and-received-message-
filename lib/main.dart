@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Start OneSignal connection
     OneSignal.shared.init(
-      "9b982bd2-a70d-4d30-9601-af4e649bda99",
+      "9b982bd2-a90d-4d30-9601-af4e649bda99",
       iOSSettings: {
         OSiOSSettings.autoPrompt: false,
         OSiOSSettings.inAppLaunchUrl: false,
@@ -53,11 +53,11 @@ class _HomeState extends State<Home> {
     final Dio dio = Dio();
 //passando o token para o dio
     dio.options.headers[HttpHeaders.authorizationHeader] =
-        'Basic ZDBiOTZiZWEtNWU0My00MjQ4LWJhNDctNzQ4NDBhOGQyMTU2';
+        'Basic TDBiOTZiZWEtNWU0My00MjQ4LWJhNDctNzQ4NDBhOGQyMTU2';
 //testando requisições
     //declrando como responde as repostas do endpoint que é a api declarada encima
     await dio.post(endpoint, data: {
-      "app_id": "9b982bd2-a70d-4d30-9601-af4e649bda99",
+      "app_id": "9b982bd2-a90d-4d30-9601-af4e649bda99",
       "included_segments": ["Subscribed Users"],
       "headings": {"en": "$title"},
       "contents": {"en": "$body"},
